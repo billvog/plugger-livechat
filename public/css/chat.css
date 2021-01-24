@@ -1,0 +1,197 @@
+.chat-container {
+    width: 500px;
+    height: 600px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 3px solid rgb(76, 88, 252);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - (500px / 2));
+    transform: translateY(-50%);
+}
+
+.chat-container .leave-room {
+    padding: 7px 9px;
+    color: #4c58fc;
+    font-size: 10pt;
+    float: left;
+}
+
+.chat-container .leave-room #leave-room-btn {
+    border: 3px solid hsl(236, 97%, 70%);
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #4c58fc;
+    color: whitesmoke;
+    padding: 4px 8px;
+    outline: 0;
+    transition: .1s;
+}
+
+.chat-container .leave-room #leave-room-btn:hover {
+    border-color: #4c58fc;
+    background-color: hsl(236, 97%, 70%);
+}
+
+.chat-container .leave-room #leave-room-btn:active {
+    border-color: hsl(236, 97%, 70%);
+    background-color: hsl(236, 97%, 70%);
+}
+
+.chat-container .room-info {
+    padding: 7px 9px;
+    color: #4c58fc;
+    font-size: 9pt;
+    text-align: right;
+}
+
+.chat-container .room-info .user-count .connected-users-count {
+    font-weight: bold;
+}
+
+.chat-container .room-info .user-name .connected-username {
+    font-weight: bold;
+}
+
+.chat-container .room-info .copy-room-id button {
+    border-radius: 30px;
+    border: 0;
+    background-color: hsl(236, 97%, 68%);
+    color: white;
+    text-align: center;
+    font-size: 9pt;
+    padding: 3px 7px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.chat-container .messages {
+    margin: 8px 10px;
+    overflow: auto;
+    max-height: calc(100% - 55px - 47px);
+}
+
+.chat-container .messages .message-wraper {
+    margin-bottom: 10px;
+    transition: .15s;
+}
+
+.chat-container .messages .message-wraper:active {
+    margin-bottom: 24px;
+}
+
+.chat-container .messages .message-wraper:last-of-type {
+    margin-bottom: 0;
+}
+
+.chat-container .messages .message-wraper .message .from {
+    border: 0;
+    border-radius: 3px;
+    background-color: hsl(236, 97%, 68%);
+    padding: 2px 6px;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.chat-container .messages .message-wraper.mine .message .from {
+    background-color: white;
+    color: hsl(236, 97%, 68%);
+}
+
+.chat-container .messages .message-wraper .message {
+    border: 3px solid hsl(236, 97%, 70%);
+    border-radius: 5px;
+    background-color: rgb(76, 88, 252);
+    color: white;
+    padding: 4px;
+    font-size: 10pt;
+}
+
+.chat-container .messages .message-wraper .message a,
+.chat-container .messages .message-wraper .message a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+.chat-container .messages .message-wraper .message.alert {
+    background-color: whitesmoke;
+    color: rgb(76, 88, 252);
+}
+
+.chat-container .messages .message-wraper .time {
+    float: right;
+    font-size: 9pt;
+    margin-right: 3px;
+    margin-top: 3px;
+    opacity: 0;
+    visibility: collapse;
+    transition: .15s;
+}
+
+.chat-container .messages .message-wraper:active .time {
+    opacity: 1;
+    visibility: visible;
+    color: rgb(117, 117, 117);
+}
+
+.chat-container .input {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 16px);
+    margin: 8px 8px;
+    display: flex;
+}
+
+.chat-container .input #message-input {
+    width: calc(100% - 80px - 24px);
+    height: 20px;
+    float: left;
+    padding: 3px 12px;
+    border-radius: 30px 0 0 30px;
+    border: 2px solid rgb(76, 88, 252);
+    outline: none;
+    font-size: 9pt;
+}
+
+.chat-container .input #message-send {
+    width: 80px;
+    height: 30px;
+    float: right;
+    padding: 3px 0;
+    border-radius: 0 30px 30px 0;
+    border: 0;
+    background-color: rgb(76, 88, 252);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: .1s;
+}
+
+.chat-container .input #message-send:hover {
+    background-color: hsl(236, 97%, 68%);
+}
+
+.chat-container .input #message-send:active {
+    background-color: hsl(236, 97%, 70%);
+}
+
+@media only screen and (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .chat-container .input #message-input {
+        height: 25px;
+    }
+
+    .chat-container .input #message-send {
+        height: 35px;
+    }
+}

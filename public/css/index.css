@@ -1,0 +1,77 @@
+.container {
+    height: fit-content;
+    height: -moz-fit-content;
+}
+
+.container h3 {
+    font-size: 20pt;
+    font-weight: 300;
+    color: rgb(76, 88, 252);
+    margin: 12px;
+}
+
+.container h3 img {
+    width: 32px;
+    margin-right: 5px;
+    transform: translateY(7.5px);
+}
+
+.container p#moreInfo {
+    font-size: 9pt;
+    color: grey;
+    padding: 12px;
+    margin: 0;
+}
+
+.form-container {
+    padding: 12px;
+    padding-top: 0;
+}
+
+.form-container .form-title {
+    font-size: 16pt;
+    margin: 0;
+    text-align: center;
+    color:rgb(76, 88, 252);
+}
+
+.form-container form label {
+    font-size: 11pt;
+    color: grey;
+}
+
+.form-container form #room-id, .form-container form #username {
+    display: block;
+    width: calc(100% - 14px);
+    border: 2px solid rgb(76, 88, 252);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 3px 5px;
+    outline: 0;
+    background-color: whitesmoke;
+    font-size: 11pt;
+}
+
+.form-container form #find-create-room {
+    display: inline-block;
+    border: 2px solid hsl(236, 97%, 70%);
+    background-color: hsl(236, 97%, 64%);
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 3px 8px;
+    outline: 0;
+    cursor: pointer;
+    transition: .1s;
+    font-size: 11pt;
+}
+
+.form-container form #find-create-room:hover {
+    border-color:  hsl(236, 97%, 64%);
+    background-color: hsl(236, 97%, 70%);
+}
+
+.form-container form #find-create-room:active {
+    border-color:  hsl(236, 97%, 70%);
+    background-color: hsl(236, 97%, 70%);
+}

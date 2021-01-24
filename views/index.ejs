@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugger Livechat</title>
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/messages.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <a href='/'><h3><b><img src="/assets/icon.png"> Plugger</b> Livechat</h3></a>
+        <div class="form-container">
+            <form id="find-create-room-form">
+                <div class="messages-container">
+                    <%- include('./partials/form-messages.ejs') %> 
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username"
+                    value="<%= typeof username != 'undefined' ? username : '' %>" maxlength='24' required>
+                    <p class="small-p">Username can contain characters, numbers, dashes, underscores, dots but it needs to start with a character</p>
+                </div>
+                <div>
+                    <label for="room-id">Room ID</label>
+                    <input type="text" name="room-id" id="room-id" placeholder="Room ID"
+                    value="<%= typeof roomId != 'undefined' ? roomId : '' %>" maxlength='64' required>
+                    <p class="small-p">Room ID can contain characters (lowwer-case), numbers, dashes, underscores but it needs to start with a character or number</p>
+                </div>
+                <button type="submit" id="find-create-room">Join or Create</button>
+            </form>
+        </div>
+        <p id="moreInfo">Learn more about Plugger Livechat <a href="/about">here</a>.</p>
+    </div>
+
+    <!-- JQuery -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- Custom -->
+    <script defer src="/js/manage-cookies.js"></script>
+    <script defer src="/js/index.js"></script>
+</body>
+</html>
