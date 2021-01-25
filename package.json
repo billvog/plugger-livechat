@@ -1,7 +1,7 @@
 {
-  "name": "SocketCoke",
+  "name": "PluggerLivechat",
   "version": "1.0.0",
-  "description": "A socket version of Coke",
+  "description": "Plugger Livechat is an anonymous free realtime chat app to contact with people all over the web.",
   "main": "server.js",
   "author": "BILLVOG",
   "license": "MIT",
