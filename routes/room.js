@@ -32,7 +32,7 @@ router.get('/:room', (req, res) => {
             username = username.slice(0, 24);
         }
 
-        if (username !== '' && !username.match('^[a-zA-Z]+([_ -.]?[a-zA-Z0-9])*$')) {
+        if (username !== '' && !username.match('^[a-zA-Z]+([_\\-.]?[a-zA-Z0-9])*$')) {
             errors.push({ message: 'Please enter a valid username' });
         }
     }
@@ -46,7 +46,7 @@ router.get('/:room', (req, res) => {
             roomId = roomId.slice(0, 64);
         }
 
-        if (roomId !== '' && !roomId.match('^[a-z0-9]+([_ -]?[a-z0-9])*$')) {
+        if (roomId !== '' && !roomId.match('^[a-z0-9]+([_\\-.]?[a-z0-9])*$')) {
             errors.push({ message: 'Please enter a valid Room ID' });
         }
     }

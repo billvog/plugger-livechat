@@ -19,12 +19,12 @@
 }
 
 .chat-container .leave-room #leave-room-btn {
-    border: 3px solid hsl(236, 97%, 70%);
-    border-radius: 30px;
+    border: 2px solid hsl(236, 97%, 70%);
+    border-radius: 3px;
     cursor: pointer;
     background-color: #4c58fc;
     color: whitesmoke;
-    padding: 4px 8px;
+    padding: 2px 5px;
     outline: 0;
     transition: .1s;
 }
@@ -61,15 +61,19 @@
     color: white;
     text-align: center;
     font-size: 9pt;
-    padding: 3px 7px;
-    margin-bottom: 3px;
+    padding: 3px 8px;
+    margin-bottom: 5px;
     cursor: pointer;
+}
+
+.chat-container .room-info .copy-room-id button .fas {
+    margin-left: 2px;
 }
 
 .chat-container .messages {
     margin: 8px 10px;
     overflow: auto;
-    max-height: calc(100% - 55px - 47px);
+    max-height: calc(100% - 55px - 72px);
 }
 
 .chat-container .messages .message-wraper {

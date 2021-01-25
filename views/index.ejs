@@ -22,13 +22,13 @@
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Username"
                     value="<%= typeof username != 'undefined' ? username : '' %>" maxlength='24' required>
-                    <p class="small-p">Username can contain characters, numbers, dashes, underscores, dots but it needs to start with a character</p>
+                    <p class="small-p">Username can contain characters, numbers, dashes, underscores, dots. It needs to start with a character</p>
                 </div>
                 <div>
                     <label for="room-id">Room ID</label>
                     <input type="text" name="room-id" id="room-id" placeholder="Room ID"
                     value="<%= typeof roomId != 'undefined' ? roomId : '' %>" maxlength='64' required>
-                    <p class="small-p">Room ID can contain characters (lowwer-case), numbers, dashes, underscores but it needs to start with a character or number</p>
+                    <p class="small-p">Room ID can contain characters (lower-case), numbers, dashes, underscores. It needs to start with a character or number</p>
                 </div>
                 <button type="submit" id="find-create-room">Join or Create</button>
             </form>

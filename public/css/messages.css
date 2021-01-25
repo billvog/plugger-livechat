@@ -44,3 +44,7 @@
     transition: .15s;
     position: fixed;
 }
+
+.message-wraper .close-btn:hover {
+    opacity: .5;
+}
