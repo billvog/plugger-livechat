@@ -16,6 +16,18 @@
     transform: translateY(7.5px);
 }
 
+.container .text-wraper {
+    font-size: 11pt;
+    margin: 15px;
+    color: grey;
+}
+
+.container .text-wraper .header {
+    font-size: 13pt;
+    margin-bottom: 5px;
+    display: block;
+}
+
 .container p#moreInfo {
     font-size: 9pt;
     color: grey;
@@ -38,40 +50,4 @@
 .form-container form label {
     font-size: 11pt;
     color: grey;
-}
-
-.form-container form #room-id, .form-container form #username {
-    display: block;
-    width: calc(100% - 14px);
-    border: 2px solid rgb(76, 88, 252);
-    border-radius: 3px;
-    margin-bottom: 5px;
-    padding: 3px 5px;
-    outline: 0;
-    background-color: whitesmoke;
-    font-size: 11pt;
-}
-
-.form-container form #find-create-room {
-    display: inline-block;
-    border: 2px solid hsl(236, 97%, 70%);
-    background-color: hsl(236, 97%, 64%);
-    color: white;
-    border-radius: 3px;
-    margin-top: 10px;
-    padding: 3px 8px;
-    outline: 0;
-    cursor: pointer;
-    transition: .1s;
-    font-size: 11pt;
-}
-
-.form-container form #find-create-room:hover {
-    border-color:  hsl(236, 97%, 64%);
-    background-color: hsl(236, 97%, 70%);
-}
-
-.form-container form #find-create-room:active {
-    border-color:  hsl(236, 97%, 70%);
-    background-color: hsl(236, 97%, 70%);
 }

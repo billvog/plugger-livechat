@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plugger Livechat</title>
+    <meta name="description" content="Plugger Livechat is an anonymous free realtime chat app to contact with people all over the web.">
     <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -20,17 +21,17 @@
                 </div>
                 <div>
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username"
+                    <input type="text" name="username" id="username" class="input" placeholder="Username"
                     value="<%= typeof username != 'undefined' ? username : '' %>" maxlength='24' required>
                     <p class="small-p">Username can contain characters, numbers, dashes, underscores, dots. It needs to start with a character</p>
                 </div>
                 <div>
                     <label for="room-id">Room ID</label>
-                    <input type="text" name="room-id" id="room-id" placeholder="Room ID"
+                    <input type="text" name="room-id" id="room-id" class="input" placeholder="Room ID"
                     value="<%= typeof roomId != 'undefined' ? roomId : '' %>" maxlength='64' required>
                     <p class="small-p">Room ID can contain characters (lower-case), numbers, dashes, underscores. It needs to start with a character or number</p>
                 </div>
-                <button type="submit" id="find-create-room">Join or Create</button>
+                <button type="submit" id="find-create-room" class="btn">Join or Create</button>
             </form>
         </div>
         <p id="moreInfo">Learn more about Plugger Livechat <a href="/about">here</a>.</p>

@@ -42,3 +42,7 @@ io.sockets.on('connection', (socket) => {
 // Routes
 app.use('/', require('./routes/index'));
 app.use('/room', require('./routes/room'));
+
+// Errors
+app.use('/public/*', (req, res) => res.render('errors/403'));
+app.use('/', (req, res) => res.render('errors/404'));
