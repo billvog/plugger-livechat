@@ -8,6 +8,8 @@
     font-weight: 300;
     color: rgb(76, 88, 252);
     margin: 12px;
+    user-select: none;
+    -moz-user-select: none;
 }
 
 .container h3 img {

@@ -81,26 +81,37 @@
     transition: .15s;
 }
 
-.chat-container .messages .message-wraper:active {
-    margin-bottom: 24px;
+.chat-container .messages .message-wraper .message .top-wraper .time {
+    color: white;
+    font-weight: 300;
 }
 
-.chat-container .messages .message-wraper:last-of-type {
-    margin-bottom: 0;
-}
-
-.chat-container .messages .message-wraper .message .from {
+.chat-container .messages .message-wraper .message .top-wraper .from {
+    font-weight: bold;
     border: 0;
-    border-radius: 3px;
+    border-radius: 15px;
     background-color: hsl(236, 97%, 68%);
-    padding: 2px 6px;
+    padding: 2px 9px;
     margin-right: 3px;
     display: inline-block;
 }
 
-.chat-container .messages .message-wraper.mine .message .from {
+.chat-container .messages .message-wraper.mine .message .top-wraper .from {
     background-color: white;
     color: hsl(236, 97%, 68%);
+}
+
+.chat-container .messages .message-wraper .message.alert .top-wraper .from {
+    color: white;
+}
+
+.chat-container .messages .message-wraper .message.alert .top-wraper .time {
+    color: #4a56fc;
+}
+
+.chat-container .messages .message-wraper .message .content {
+    display: block;
+    margin: 3px 3px 0 3px;
 }
 
 .chat-container .messages .message-wraper .message {
@@ -121,22 +132,6 @@
 .chat-container .messages .message-wraper .message.alert {
     background-color: whitesmoke;
     color: rgb(76, 88, 252);
-}
-
-.chat-container .messages .message-wraper .time {
-    float: right;
-    font-size: 9pt;
-    margin-right: 3px;
-    margin-top: 3px;
-    opacity: 0;
-    visibility: collapse;
-    transition: .15s;
-}
-
-.chat-container .messages .message-wraper:active .time {
-    opacity: 1;
-    visibility: visible;
-    color: rgb(117, 117, 117);
 }
 
 .chat-container .message-input {

@@ -1,7 +1,7 @@
 <% if (typeof errors !== 'undefined') { %> 
     <% errors.forEach((error) => { %> 
         <div class="message-wraper error">
-            <div class="message"><%= error.message %> </div>
+            <div class="message"><%= error.message %></div>
             <div class="close-btn" onclick="$(this).parent().remove()">
                 <i class="fas fa-times"></i>
             </div>
