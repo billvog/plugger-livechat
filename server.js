@@ -20,11 +20,12 @@ var clientsCount = {};
 // Run when client connected
 io.on('connection', (socket) => {
     // When user joins a room
-    socket.on('join-room', (roomId, user) => {
+    socket.on('join-room', (roomId, user, userTimezone) => {
         socket.join(roomId);
 
         // Set custom variables to socket obj (represents a user)
         socket.user = user;
+        socket.userTimezone = userTimezone;
         socket.room = roomId;
 
         // Update room user count
@@ -35,7 +36,8 @@ io.on('connection', (socket) => {
         io.to(socket.room).emit('user-count-changed', clientsCount[socket.room]);
         socket.to(socket.room).broadcast.emit('alert-message', formatMessage(
             chatbotName,
-            `<b>${socket.user}</b> has connected`
+            `<b>${socket.user}</b> has connected`,
+            socket.userTimezone
         ));
     });
 
@@ -48,7 +50,8 @@ io.on('connection', (socket) => {
         io.to(socket.room).emit('user-count-changed', clientsCount[socket.room]);
         socket.to(socket.room).broadcast.emit('alert-message', formatMessage(
             chatbotName,
-            `<b>${socket.user}</b> has disconnected`
+            `<b>${socket.user}</b> has disconnected`,
+            socket.userTimezone
         ));
     });
 
@@ -62,9 +65,10 @@ io.on('connection', (socket) => {
         io.to(socket.room).emit('new-message', formatMessage(
             {
                 id: socket.id,
-                user: socket.user,
+                user: socket.user
             },
-            message.text.trim()
+            message.text.trim(),
+            socket.userTimezone
         ));
     });
 });

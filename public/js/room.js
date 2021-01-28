@@ -7,7 +7,7 @@ const socket = io('/', {
 });
 
 // Socket.io
-socket.emit('join-room', ROOM_ID, USERNAME);
+socket.emit('join-room', ROOM_ID, USERNAME, Intl.DateTimeFormat().resolvedOptions().timeZone);
 
 // User count changed
 socket.on('user-count-changed', (newClientsCount) => {
