@@ -12,6 +12,7 @@
     color: white;
     padding: 4px 8px;
     border-radius: 3px;
+    padding: 8px 10px;
 }
 
 .message-wraper.success {
@@ -31,13 +32,11 @@
 }
 
 .message-wraper .message {
-    width: calc(100% - 24px);
-    padding: 2px;
+    width: calc(100% - 14px);
 }
 
 .message-wraper .close-btn {
     width: 16px;
-    padding: 2px;
     border-radius: 30px;
     text-align: center;
     cursor: pointer;

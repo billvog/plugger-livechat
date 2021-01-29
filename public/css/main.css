@@ -16,6 +16,7 @@ a:hover, a:visited:hover {
 button, input, img {
     user-select: none;
     -moz-user-select: none;
+    outline: 0;
 }
 
 .btn {

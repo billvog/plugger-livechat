@@ -22,7 +22,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #6872fd;
+    background-color: #717af5;
     color: whitesmoke;
     padding: 4px 7px;
     outline: 0;
@@ -30,7 +30,7 @@
 }
 
 .chat-container .leave-room #leave-room-btn:hover {
-    background-color: hsl(236, 97%, 68%);
+    background-color: hsl(236, 87%, 72%);
 }
 
 .chat-container .room-info {
@@ -38,7 +38,7 @@
     color: whitesmoke;
     font-size: 9pt;
     text-align: right;
-    background-color: #4a56fc;
+    background-color: #5e69fd;
     user-select: none;
     -moz-user-select: none;
 }
@@ -56,13 +56,18 @@
 .chat-container .room-info .copy-room-id button {
     border-radius: 30px;
     border: 0;
-    background-color: hsl(236, 97%, 68%);
+    background-color: hsl(236, 97%, 71%);
     color: white;
     text-align: center;
     font-size: 9pt;
     padding: 3px 8px;
     margin-bottom: 5px;
     cursor: pointer;
+    transition: .1s;
+}
+
+.chat-container .room-info .copy-room-id button:hover {
+    background-color: hsl(236, 97%, 73%);
 }
 
 .chat-container .room-info .copy-room-id button .fas {
